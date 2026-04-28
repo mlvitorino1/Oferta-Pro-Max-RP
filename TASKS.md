@@ -24,7 +24,7 @@
 
 ### Infraestrutura & Ambiente
 
-- [ ] 🔴 Criar repositório GitHub com estrutura de branches (`main`, `develop`, `feature/*`, `hotfix/*`)
+- [X] 🔴 Criar repositório GitHub com estrutura de branches (`main`, `develop`, `feature/*`, `hotfix/*`) 28/04/2026
 - [ ] 🔴 Configurar projeto Supabase Cloud (prod + staging)
 - [ ] 🔴 Configurar projeto Vercel conectado ao GitHub (preview por PR automático)
 - [ ] 🔴 Configurar variáveis de ambiente (`.env.local`, `.env.production`) com vault seguro
