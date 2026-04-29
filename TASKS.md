@@ -35,20 +35,20 @@
 
 ### Setup Next.js
 
-- [ ] 🔴 Inicializar projeto Next.js 14+ com App Router + TypeScript strict
-- [ ] 🔴 Instalar e configurar Tailwind CSS + Shadcn UI
-- [ ] 🔴 Configurar ESLint + Prettier + Husky + lint-staged
-- [ ] 🔴 Configurar path aliases em `tsconfig.json` (`@/`, `@components/`, `@lib/`)
-- [ ] 🟠 Configurar estrutura de pastas conforme arquitetura (`/app`, `/components`, `/lib`, `/hooks`, `/types`, `/services`)
-- [ ] 🟠 Configurar PWA com `next-pwa` (manifest, service worker, ícones)
+- [X] 🔴 Inicializar projeto Next.js 14+ com App Router + TypeScript strict 29/04/2026
+- [X] 🔴 Instalar e configurar Tailwind CSS + Shadcn UI 29/04/2026
+- [X] 🔴 Configurar ESLint + Prettier + Husky + lint-staged 29/04/2026
+- [X] 🔴 Configurar path aliases em `tsconfig.json` (`@/`, `@components/`, `@lib/`) 29/04/2026
+- [X] 🟠 Configurar estrutura de pastas conforme arquitetura (`/app`, `/components`, `/lib`, `/hooks`, `/types`, `/services`) 29/04/2026
+- [X] 🟠 Configurar PWA com `next-pwa` (manifest, service worker, ícones) 29/04/2026
 - [ ] 🟡 Configurar Framer Motion
 
 ### Pipeline CI/CD
 
-- [ ] 🔴 Criar workflow GitHub Actions para `lint + typecheck` em PRs
-- [ ] 🟠 Criar workflow de deploy automático no merge para `main`
-- [ ] 🟠 Configurar preview deploy automático por PR (Vercel integration)
-- [ ] 🟡 Criar workflow de smoke test pós-deploy em produção
+- [X] 🔴 Criar workflow GitHub Actions para `lint + typecheck` em PRs 29/04/2026
+- [X] 🟠 Criar workflow de deploy automático no merge para `main` 29/04/2026
+- [X] 🟠 Configurar preview deploy automático por PR (Vercel integration) 28/04/2026
+- [X] 🟡 Criar workflow de smoke test pós-deploy em produção 29/04/2026
 
 ---
 
@@ -89,8 +89,8 @@
 
 - [ ] 🔴 Configurar Supabase Auth (email/password + magic link)
 - [X] 🔴 Criar fluxo de cadastro com criação automática de `profile` via trigger Supabase 28/04/2026
-- [ ] 🔴 Criar hook `useAuth()` com contexto global no Next.js
-- [ ] 🔴 Implementar middleware de proteção de rotas (`/dashboard/*`, `/admin/*`)
+- [X] 🔴 Criar hook `useAuth()` com contexto global no Next.js 29/04/2026
+- [X] 🔴 Implementar middleware de proteção de rotas (`/dashboard/*`, `/admin/*`) 29/04/2026
 - [ ] 🟠 Página `/auth/login` com formulário email + senha
 - [ ] 🟠 Página `/auth/register` com onboarding mínimo
 - [ ] 🟠 Página `/auth/forgot-password` com magic link
@@ -327,5 +327,5 @@ Toda task concluída deve atender:
 
 ---
 
-*Última atualização: 28/04/2026 — Auditoria automática via Supabase + Vercel + GitHub*
+*Última atualização: 29/04/2026 — Auditoria automática via Supabase + Vercel + GitHub*
 *Próxima revisão: ao fim de cada sprint*
