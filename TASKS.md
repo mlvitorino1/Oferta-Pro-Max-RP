@@ -25,12 +25,12 @@
 ### Infraestrutura & Ambiente
 
 - [X] 🔴 Criar repositório GitHub com estrutura de branches (`main`, `develop`, `feature/*`, `hotfix/*`) 28/04/2026
-- [ ] 🔴 Configurar projeto Supabase Cloud (prod + staging)
-- [ ] 🔴 Configurar projeto Vercel conectado ao GitHub (preview por PR automático)
+- [X] 🔴 Configurar projeto Supabase Cloud (prod + staging) 28/04/2026
+- [X] 🔴 Configurar projeto Vercel conectado ao GitHub (preview por PR automático) 28/04/2026
 - [ ] 🔴 Configurar variáveis de ambiente (`.env.local`, `.env.production`) com vault seguro
 - [ ] 🔴 Definir regras de branch protection no GitHub (`main` requer PR + review)
 - [ ] 🟠 Configurar domínio e SSL no Vercel
-- [ ] 🟠 Separar projetos Supabase: `ofertapromax-prod` e `ofertapromax-staging`
+- [X] 🟠 Separar projetos Supabase: `ofertapromax-prod` e `ofertapromax-staging` 28/04/2026
 - [ ] 🟡 Configurar Sentry para captura de erros (frontend + edge functions)
 
 ### Setup Next.js
@@ -58,39 +58,39 @@
 
 ### Schema PostgreSQL (Supabase)
 
-- [ ] 🔴 Criar tabela `profiles` (id, email, full_name, avatar_url, city_id, plan_id, created_at, updated_at)
-- [ ] 🔴 Criar tabela `cities` (id, name, state, slug, active, created_at)
-- [ ] 🔴 Criar tabela `markets` (id, name, city_id, logo_url, address, active, created_at)
-- [ ] 🔴 Criar tabela `categories` (id, name, slug, icon, active)
-- [ ] 🔴 Criar tabela `products` (id, name, category_id, unit, created_at)
-- [ ] 🔴 Criar tabela `offers` (id, product_id, market_id, price, original_price, valid_from, valid_until, image_url, active, created_at, updated_at)
-- [ ] 🔴 Criar tabela `subscriptions` (id, user_id, plan, status, trial_ends_at, current_period_end, payment_provider_id, created_at)
-- [ ] 🔴 Criar tabela `shopping_lists` (id, user_id, name, city_id, created_at)
-- [ ] 🔴 Criar tabela `shopping_list_items` (id, list_id, product_id, offer_id, quantity, checked, created_at)
-- [ ] 🔴 Criar tabela `notifications` (id, user_id, title, body, type, read, created_at)
-- [ ] 🔴 Criar tabela `admins` (id, user_id, role, city_id, created_at)
-- [ ] 🔴 Criar tabela `audit_logs` (id, admin_id, action, entity, entity_id, payload, created_at)
-- [ ] 🟠 Criar índices: `offers(market_id)`, `offers(valid_until)`, `offers(active)`, `shopping_list_items(list_id)`, `profiles(city_id)`
-- [ ] 🟠 Ativar `updated_at` automático via trigger em tabelas principais
-- [ ] 🟡 Criar enums PostgreSQL: `subscription_status`, `admin_role`, `notification_type`
+- [X] 🔴 Criar tabela `profiles` (id, email, full_name, avatar_url, city_id, plan_id, created_at, updated_at) 28/04/2026
+- [X] 🔴 Criar tabela `cities` (id, name, state, slug, active, created_at) 28/04/2026
+- [X] 🔴 Criar tabela `markets` (id, name, city_id, logo_url, address, active, created_at) 28/04/2026
+- [X] 🔴 Criar tabela `categories` (id, name, slug, icon, active) 28/04/2026
+- [X] 🔴 Criar tabela `products` (id, name, category_id, unit, created_at) 28/04/2026
+- [X] 🔴 Criar tabela `offers` (id, product_id, market_id, price, original_price, valid_from, valid_until, image_url, active, created_at, updated_at) 28/04/2026
+- [X] 🔴 Criar tabela `subscriptions` (id, user_id, plan, status, trial_ends_at, current_period_end, payment_provider_id, created_at) 28/04/2026
+- [X] 🔴 Criar tabela `shopping_lists` (id, user_id, name, city_id, created_at) 28/04/2026
+- [X] 🔴 Criar tabela `shopping_list_items` (id, list_id, product_id, offer_id, quantity, checked, created_at) 28/04/2026
+- [X] 🔴 Criar tabela `notifications` (id, user_id, title, body, type, read, created_at) 28/04/2026
+- [X] 🔴 Criar tabela `admins` (id, user_id, role, city_id, created_at) 28/04/2026
+- [X] 🔴 Criar tabela `audit_logs` (id, admin_id, action, entity, entity_id, payload, created_at) 28/04/2026
+- [X] 🟠 Criar índices: `offers(market_id)`, `offers(valid_until)`, `offers(active)`, `shopping_list_items(list_id)`, `profiles(city_id)` 28/04/2026
+- [X] 🟠 Ativar `updated_at` automático via trigger em tabelas principais 28/04/2026
+- [X] 🟡 Criar enums PostgreSQL: `subscription_status`, `admin_role`, `notification_type` 28/04/2026
 
 ### Row Level Security (RLS)
 
-- [ ] 🔴 Ativar RLS em todas as tabelas
-- [ ] 🔴 Policy `profiles`: usuário só acessa o próprio perfil
-- [ ] 🔴 Policy `shopping_lists`: usuário só acessa suas listas
-- [ ] 🔴 Policy `shopping_list_items`: usuário só acessa itens das suas listas
-- [ ] 🔴 Policy `subscriptions`: usuário só vê sua própria subscription
-- [ ] 🔴 Policy `offers`, `markets`, `cities`, `categories`, `products`: leitura pública (ou autenticada)
-- [ ] 🔴 Policy `admins`, `audit_logs`: somente service role / admin autenticado
+- [X] 🔴 Ativar RLS em todas as tabelas 28/04/2026
+- [X] 🔴 Policy `profiles`: usuário só acessa o próprio perfil 28/04/2026
+- [X] 🔴 Policy `shopping_lists`: usuário só acessa suas listas 28/04/2026
+- [X] 🔴 Policy `shopping_list_items`: usuário só acessa itens das suas listas 28/04/2026
+- [X] 🔴 Policy `subscriptions`: usuário só vê sua própria subscription 28/04/2026
+- [X] 🔴 Policy `offers`, `markets`, `cities`, `categories`, `products`: leitura pública (ou autenticada) 28/04/2026
+- [X] 🔴 Policy `admins`, `audit_logs`: somente service role / admin autenticado 28/04/2026
 - [ ] 🟠 Testar RLS com usuário de teste para validar isolamento
 
 ### Autenticação
 
 - [ ] 🔴 Configurar Supabase Auth (email/password + magic link)
+- [X] 🔴 Criar fluxo de cadastro com criação automática de `profile` via trigger Supabase 28/04/2026
 - [ ] 🔴 Criar hook `useAuth()` com contexto global no Next.js
 - [ ] 🔴 Implementar middleware de proteção de rotas (`/dashboard/*`, `/admin/*`)
-- [ ] 🔴 Criar fluxo de cadastro com criação automática de `profile` via trigger Supabase
 - [ ] 🟠 Página `/auth/login` com formulário email + senha
 - [ ] 🟠 Página `/auth/register` com onboarding mínimo
 - [ ] 🟠 Página `/auth/forgot-password` com magic link
@@ -327,5 +327,5 @@ Toda task concluída deve atender:
 
 ---
 
-*Última atualização: Sprint 0 — Fundação*
+*Última atualização: 28/04/2026 — Auditoria automática via Supabase + Vercel + GitHub*
 *Próxima revisão: ao fim de cada sprint*
