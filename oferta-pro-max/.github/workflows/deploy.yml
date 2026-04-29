@@ -1,0 +1,32 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    name: Production Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Notify deploy start
+        run: echo "Deploying to production..."
+
+      # Vercel deploy é automático via integração GitHub
+      # Este workflow existe para smoke tests pós-deploy futuros
+
+      - name: Wait for Vercel deployment
+        run: sleep 30
+
+      - name: Smoke test
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" ${{ secrets.NEXT_PUBLIC_APP_URL }})
+          if [ "$STATUS" != "200" ]; then
+            echo "Smoke test FAILED — HTTP $STATUS"
+            exit 1
+          fi
+          echo "Smoke test PASSED — HTTP $STATUS"
